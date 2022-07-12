@@ -16,10 +16,9 @@ body{
 .app-nav{
   display: flex; justify-content: space-between; align-items: center;
   height: 12rem; width: 100%; padding-block: 2rem; padding-inline: 3rem;
-  border-bottom: 1px solid var(--line-clr);
 }
 .nav-line{
-  width: 100%; height: 1px; background: var(--line-clr);
+  width: 100%; height: 1.2px; background: var(--line-clr);
 }
 .app-nav button{
   background: none; border: none;
@@ -31,6 +30,9 @@ body{
   filter: drop-shadow(var(--dropshw-color-hover));
 }
 @media(max-width:767px){
+.container-acessibility a span{
+  display: none; visibility: none;
+}
 .left-menu{
   display: none; visibility: none;
 }
@@ -61,6 +63,24 @@ body{
 }
 }
 @media (min-width: 768px){
+.logo_PrevSenior_Black{
+  transform: translateX(15rem);
+}
+.container-acessibility-search{
+  display: flex; align-items: center; gap: 2rem;
+}
+.container-acessibility{
+  display: flex; align-items: center; gap: 1.5rem;
+}
+.container-acessibility button{
+  filter: drop-shadow(none);
+}
+.container-acessibility a{
+  text-decoration: none; color: white; font-size: 1.6rem;
+}
+.container-acessibility img{
+  width: 4rem; height: 4rem;
+}
 .app-nav input{
 height: 4rem; background: none; padding: 2rem;
 border-radius: 4rem; border: 1px solid gray;
