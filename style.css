@@ -4,22 +4,23 @@
 :root{
   font-size: 62.5%;
   --ff-main: 'Raleway', sans-serif;
-  --bg-clr: radial-gradient(circle, rgb(22, 22, 22) 0%, rgb(9, 9, 9) 55%);
-  --line-clr: linear-gradient(90deg, rgba(9,9,9,0.15) 0%, rgba(57,57,57,1) 50%, rgba(9,9,9,0.14609593837535018) 100%);
+  --bg-clr-light:radial-gradient(circle, rgba(255,255,255,1) 25%, rgba(237,237,237,1) 100%);
+  --bg-clr-dark: radial-gradient(circle, rgb(22, 22, 22) 0%, rgb(9, 9, 9) 55%);
+  --fclr-light: hsl(255, 100%, 100%);
+  --fclr-dark: hsl(0, 0%, 0%);
+  --line-clr-light: linear-gradient(90deg, rgba(9,9,9,0.15) 0%, rgba(57,57,57,1) 50%, rgba(9,9,9,0.14609593837535018) 100%);
+  --line-clr-dark: linear-gradient(90deg, rgba(220,220,220,0) 0%, rgba(0,0,0,1) 50%, rgba(220,220,220,0) 100%);
   --dropshw-color: 5px 5px 10px rgba(255, 255, 255, 0.055);
   --dropshw-color-hover: 5px 5px 10px rgba(255, 255, 255, 0.096);
   --font-hover-clr: hsl(199, 52%, 61%);
 }
 body{
   font-family: var(--ff-main);
-  background: var(--bg-clr);
+  background: var(--bg-clr-dark);
 }
 .app-nav, #app-nav{
   display: flex; justify-content: space-between; align-items: center;
   height: 12rem; width: 100%; padding:1rem 3rem 1rem 3rem;
-}
-.nav-line{
-  width: 100%; height: 1.2px; background: var(--line-clr);
 }
 .app-nav button{
   background: none; border: none; cursor: pointer;
@@ -35,68 +36,75 @@ body{
   list-style: none;
 }
 .list-menu a{
-  color: hsl(0, 0%, 100%); text-decoration: none; font-size: 2rem;
+  color: var(--fclr-light); text-decoration: none; font-size: 2rem;
 }
 .list-menu a:hover{
-  color: var(--font-hover-clr);
-}
-@media(max-width:767px){
-
-.logo_PrevSenior_Black{
-  transform: translateX(-.5rem);
-}
-.container-acessibility a span{
-  display: none; visibility: none;
-}
-.list-menu{
-  display: none; visibility: none;
-}
-}
-@media (min-width: 768px){
-.container-acessibility-search{
-  display: flex; align-items: center; gap: 2rem;
-}
-.container-acessibility{
-  display: flex; align-items: center; gap: 1.5rem;
-}
-.container-acessibility button{
-  filter: drop-shadow(none);
-}
-.container-acessibility a{
-  text-decoration: none; color: white; font-size: 1.6rem;
-}
-.container-acessibility a:hover{
   color: var(--font-hover-clr);
 }
 .container-acessibility img{
   width: 4rem; height: 4rem;
 }
-.left-menu{
-  display: none; visibility: none;
+.logo_PrevSenior_Black{
+  transform: translateX(-.5rem);
 }
+.container-acessibility-search{
+  display: flex; align-items: center; gap: 2rem;
+}
+.search-field {
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.5rem;
+  border: none; border-radius: 10rem; outline: none;
+}
+@media(max-width:767px){
+  .container-acessibility a span{
+    display: none; visibility: none;
+  }
+  .list-menu{
+    display: none; visibility: none;
+}
+}
+@media (min-width: 768px){
+  .container-acessibility{
+    display: flex; align-items: center; gap: 1.5rem;
+  }
+  .container-acessibility button{
+    filter: drop-shadow(none);
+  }
+  .container-acessibility a{
+    text-decoration: none; color: var(--fclr-light); font-size: 1.6rem;
+  }
+  .container-acessibility a:hover{
+    color: var(--font-hover-clr);
+  }
+  .left-menu{
+    display: none; visibility: none;
+  }
 }
 .app-nav input{
   height: 4rem; background: none;
   border-radius: 4rem; border: 1px solid gray;
-  box-shadow:0 0 10px #7c7c7c2a; color: rgba(255, 255, 255, 0.548);
+  box-shadow:0 0 1rem #7c7c7c2a; color: rgba(255, 255, 255, 0.548);
   transition: all 300ms ease-in-out;
-  }
-  .form {
-    display: flex; flex-direction: row;
-  }
-  .search-field {
-    width: 100%;
-    padding: 1rem 3.5rem 1rem 1.5rem;
-    border: none; border-radius: 100px; outline: none;
-  }
-  .search-button {
-    background: transparent; margin-left: -33px;
-    border: none; outline: none;
-  }
-  .search-button img {
-    cursor: pointer;
-    width: 20px; height: 20px; object-fit: cover;
-  }
-  .app-nav input:focus{
-    box-shadow:0 0 10px hsla(0, 0%, 49%, 0.281);
+}
+.form {
+  display: flex; flex-direction: row;
+}
+.search-field {
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.5rem;
+  border: none; border-radius: 10rem; outline: none;
+}
+.search-button {
+  background: transparent; margin-left: -3.3rem;
+  border: none; outline: none;
+}
+.search-button img {
+  cursor: pointer;
+  width: 2rem; height: 2rem; object-fit: cover;
+}
+.app-nav input:focus{
+  box-shadow:0 0 1rem hsla(0, 0%, 49%, 0.281);
+}
+.nav-line{
+  width: 100%; height: .12rem; background: var(--line-clr-light);
 }
