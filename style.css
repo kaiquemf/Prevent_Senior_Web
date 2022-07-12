@@ -76,6 +76,9 @@ body{
 .container-acessibility a{
   text-decoration: none; color: white; font-size: 1.6rem;
 }
+.container-acessibility a:hover{
+  color: hsl(240, 64%, 87%);
+}
 .container-acessibility img{
   width: 4rem; height: 4rem;
 }
