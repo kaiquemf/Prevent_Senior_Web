@@ -1,6 +1,4 @@
 import menuNavigation from "./menuNavigation.js"
-import changeBackground from "./changeBackground.js"
-
 export class Router {
     routes = {}
 
@@ -23,12 +21,10 @@ export class Router {
 
         menuNavigation()
 
-        changeBackground()
-
         fetch(route)
             .then(data => data.text())
             .then(html => {
-                document.querySelector('.app').innerHTML = html
+                document.querySelector('.app-main').innerHTML = html
             })
     }
 }
