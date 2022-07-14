@@ -150,10 +150,10 @@ body{
   background: var(--fclr-light);
 }
 .radio-1:checked .slider-1{
-  margin-right: 0;
+  margin-left: 0;
 }
 .radio-2:checked .slider-1{
-  margin-right: -50%;
+  margin-left: -50%;
 }
 /*BUTTON TO TOP======================================================================================================================================================*/
 .back-to-top{
