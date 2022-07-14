@@ -120,18 +120,21 @@ body{
   width: 100%; height: .12rem; background: var(--line-clr-light);
 }
 /*HOME PAGE==========================================================================================================================================================*/
+.image-slider-2{
+  object-fit: cover;
+}
 .slider-section{
   margin: 0 auto; width: 100vw; height: 40rem; object-fit: cover;
   overflow: hidden;
 }
 .slides{
-  width: 400%; height:40rem; display: flex;
+  width: 100%; height:40rem; display: flex;
 }
 .slides input{
   display: none;
 }
 .image{
-  width: 25%; position: relative;
+  width: 100%; position: relative;
 }
 .image img{
   width: 100vw;
@@ -149,11 +152,11 @@ body{
 .manual-btn:hover{
   background: var(--fclr-light);
 }
-.radio-1:checked .slider-1{
+.radio-1:checked ~ #slider-1{
   margin-left: 0;
 }
-.radio-2:checked .slider-1{
-  margin-left: -50%;
+.radio-2:checked ~ #slider-1{
+  margin-left: -25%;
 }
 /*BUTTON TO TOP======================================================================================================================================================*/
 .back-to-top{
